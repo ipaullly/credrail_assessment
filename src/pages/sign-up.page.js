@@ -14,7 +14,7 @@ const SignUp = () => {
 
   let navigate = useNavigate();
 
-  const [url, setUrl] = useState("http://localhost:8000/users");
+  const [url, setUrl] = useState(`${process.env.REACT_APP_API_URL}/users`);
   const { data: userList , isPending, error } = useFetch(url);
 
   const onSubmit = methods.handleSubmit(data => {
@@ -36,7 +36,7 @@ const SignUp = () => {
         setIsDuplicate(false)
       }, 5000);
     } else {
-      fetch('http://localhost:8000/users', {
+      fetch(`${process.env.REACT_APP_API_URL}/users`, {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
         body: JSON.stringify(payload)

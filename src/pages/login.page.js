@@ -15,7 +15,7 @@ const Login = () => {
     // navigate function
   let navigate = useNavigate();
 
-  const [url, setUrl] = useState("http://localhost:8000/users");
+  const [url, setUrl] = useState(`${process.env.REACT_APP_API_URL}/users`);
   const { data: userList } = useFetch(url);
 
   const onSubmit = methods.handleSubmit(data => {

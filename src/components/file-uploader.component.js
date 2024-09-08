@@ -97,7 +97,7 @@ const FileUploader = () => {
         }
       ]
     }
-    fetch('http://localhost:8000/users/'+userInfo.id, {
+    fetch(`${process.env.REACT_APP_API_URL}/users/`+userInfo.id, {
       method: 'PUT',
       headers: {'Content-Type' : 'application/json'},
       body: JSON.stringify(payload)
