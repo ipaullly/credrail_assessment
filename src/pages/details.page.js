@@ -14,7 +14,6 @@ const Details = () => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    console.log('viewAllDetails', viewAllDetails)
     if (!userInfo.emnail && !userInfo.id) {
       navigate('/login')
     }

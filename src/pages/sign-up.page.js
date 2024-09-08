@@ -14,8 +14,8 @@ const SignUp = () => {
 
   let navigate = useNavigate();
 
-  const [url, setUrl] = useState(`${process.env.REACT_APP_API_URL}/users`);
-  const { data: userList , isPending, error } = useFetch(url);
+  const [url,] = useState(`${process.env.REACT_APP_API_URL}/users`);
+  const { data: userList } = useFetch(url);
 
   const onSubmit = methods.handleSubmit(data => {
     console.log('signup data',data)
