@@ -77,9 +77,9 @@ const FileUploader = () => {
   };
 
   const onSubmit = (formData) => {
-    console.log('Form submitted:', formData);
-    console.log('file name', formData.file[0]?.name);
-    console.log('user data', recordData);
+    // console.log('Form submitted:', formData);
+    // console.log('file name', formData.file[0]?.name);
+    // console.log('user data', recordData);
     let payload = {
       ...userInfo,
       uploadedFiles: [

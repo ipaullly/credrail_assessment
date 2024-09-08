@@ -15,13 +15,14 @@ const Login = () => {
     // navigate function
   let navigate = useNavigate();
 
-  const [url, ] = useState(`${process.env.REACT_APP_API_URL}/users`);
-  const { data: userList } = useFetch(url);
+  const { data: userList } = useFetch(`${process.env.REACT_APP_API_URL}/users`);
 
   const onSubmit = methods.handleSubmit(data => {
     console.log('login data',data)
     console.log('users data',userList)
-    const duplicateVal = userList.filter(user => (user.email === data.email) && (user.password === data.password))
+    const duplicateVal = userList?.length 
+      ? userList.filter(user => (user.email === data.email) && (user.password === data.password))
+      : []
     console.log('login account', duplicateVal)
     if (duplicateVal.length) {
       setUserInfo(duplicateVal[0])
