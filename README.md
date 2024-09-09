@@ -54,7 +54,7 @@ npm run start
 
 ## Deployment
 
-[credrail-file-upload-netlify](https://main--credrail-file-upload.netlify.app/)
+[credrail-file-upload-netlify](https://credrail-file-upload.netlify.app)
 
 
 ## Built With
