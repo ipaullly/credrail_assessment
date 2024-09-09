@@ -18,14 +18,14 @@ const SignUp = () => {
   const { data: userList } = useFetch(url);
 
   const onSubmit = methods.handleSubmit(data => {
-    console.log('signup data',data)
+    // console.log('signup data',data)
     let payload = {
       ...data,
       uploadedFiles: []
     }
-    console.log('users data',userList)
+    // console.log('users data',userList)
     const duplicateVal = !!userList.filter(user => user.email === data.email).length
-    console.log('is duplicate', duplicateVal)
+    // console.log('is duplicate', duplicateVal)
     if (data.password !== data.confirmPassword){
       methods.setError('confirmPassword', {
         message: "Passwords don't match"
@@ -62,7 +62,7 @@ const SignUp = () => {
         className="mt-10 flex flex-col items-center justify-center mx-auto"
       >
         <h2 className='my-5 text-3xl capitalize'>Sign Up</h2>
-        <div className="flex flex-col items-center justify-around w-1/3">
+        <div className="flex flex-col items-center justify-around w-4/5 md:w-1/3">
           <Input {...first_name_validation} />
           <Input {...last_name_validation} />
           <Input {...email_validation} />

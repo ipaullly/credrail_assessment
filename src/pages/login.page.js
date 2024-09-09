@@ -43,7 +43,7 @@ const Login = () => {
         className="mt-36 flex flex-col items-center justify-center mx-auto"
       >
         <h2 className='my-10 text-3xl capitalize'>Login</h2>
-        <div className="flex flex-col items-center justify-around w-1/3">
+        <div className="flex flex-col items-center justify-around w-4/5 md:w-1/3">
           <Input {...email_validation} />
           <Input {...password_validation} />
         </div>

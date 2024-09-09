@@ -14,7 +14,7 @@ const SideBar = () => {
         className="mb-2 flex flex-col h-20 items-start justify-end rounded-md bg-amber-600 p-4 md:h-40"
         to={'/'}
       >
-        <span className='text-white text-xl mb-20'>Hello {userInfo['first-name'] + ' ' + userInfo['last-name']}</span>
+        <span className='text-white text-xl mb-4 md:mb-20'>Hello {userInfo['first-name'] + ' ' + userInfo['last-name']}</span>
         <div className="w-32 text-white md:w-40">
           <GiAbstract050 />
         </div>
@@ -29,7 +29,7 @@ const SideBar = () => {
             }`
           }
         >
-          <p className="hidden md:block">{'File Upload'}</p>
+          <p className="">{'File Upload'}</p>
         </Link>
         <Link
           to={'/details'}
@@ -40,7 +40,7 @@ const SideBar = () => {
             }`
           }
         >
-          <p className="hidden md:block">{'Details'}</p>
+          <p className="">{'Details'}</p>
         </Link>
         <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
         <Link to={`/login`}>
